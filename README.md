@@ -1,10 +1,21 @@
-## Kristina Nazarjanová — UX Designer
+# Kristina Nazarjanová — Portfolio
 
-This app was created using https://getmocha.com.
-Need help or want to join the community? Join our [Discord](https://discord.gg/shDEGBSe2d).
+Personal portfolio website of Kristina Nazarjanová, UX Designer based in Brno, Czech Republic.
 
-To run the devserver:
-```
+
+## Stack
+
+- React 19 + TypeScript
+- Vite + Tailwind CSS
+- Cloudflare Pages
+
+## Run locally
+
+```bash
 npm install
 npm run dev
 ```
+
+## Deploy
+
+Deployed via Cloudflare Pages. Every push to `main` triggers an automatic build.
