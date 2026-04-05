@@ -3,7 +3,7 @@ import HomePage from "@/react-app/pages/Home";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/nazarjanova-portfolio">
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>

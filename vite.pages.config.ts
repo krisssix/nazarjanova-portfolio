@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 // Separate config for GitHub Pages — no Cloudflare plugin
 export default defineConfig({
   plugins: [react()],
-  base: "./",
+  base: "/nazarjanova-portfolio/",
   build: {
     outDir: "dist",
     chunkSizeWarningLimit: 5000,
