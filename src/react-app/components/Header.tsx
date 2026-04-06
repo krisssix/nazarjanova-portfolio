@@ -37,7 +37,7 @@ export default function Header() {
             ))}
             <div className="flex items-center gap-3 ml-2">
               <a
-                href="https://www.linkedin.com/in/kristynajanovova/"
+                href="https://www.linkedin.com/in/kristina-nazarjanova/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-1.5 border border-foreground/50 text-sm rounded-lg hover:bg-foreground hover:text-background transition-all duration-200"
@@ -85,7 +85,7 @@ export default function Header() {
             ))}
             <div className="flex gap-3 mt-3 pt-3 border-t border-border/50">
               <a
-                href="https://www.linkedin.com/in/kristynajanovova/"
+                href="https://www.linkedin.com/in/kristina-nazarjanova/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 border border-foreground/50 text-sm rounded-lg hover:bg-foreground hover:text-background transition-all duration-200"
