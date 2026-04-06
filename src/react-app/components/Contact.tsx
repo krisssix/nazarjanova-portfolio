@@ -11,7 +11,7 @@ const links = [
     border: "border-rose-200/60",
   },
   {
-    href: "https://www.linkedin.com/in/kristynajanovova/",
+    href: "https://www.linkedin.com/in/kristina-nazarjanova/",
     icon: Linkedin,
     label: "LinkedIn",
     external: true,
