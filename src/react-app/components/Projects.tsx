@@ -32,7 +32,7 @@ const projects: Project[] = [
       "https://www.figma.com/design/YGPl0XwzXFz4WMtHdEo1Tl/RTVS---Final-v%C3%BDstupy",
     tags: ["UX Research", "User Interviews", "Personas", "Wireframing"],
     gradient: "from-rose-100 to-amber-50",
-    image: "/images/project-rtv.jpg",
+    image: "./images/project-rtv.jpg",
   },
   {
     id: "ticketportal",
@@ -49,7 +49,7 @@ const projects: Project[] = [
       "https://www.figma.com/design/JVFaiTlOGdcpfpQ4ehaZgo/Ticketportal-backoffice?node-id=1195-260768",
     tags: ["Product Design", "Design Systems", "Enterprise UX", "Prototyping"],
     gradient: "from-amber-50 to-orange-100",
-    image: "/images/ticketportal.jpeg",
+    image: "./images/ticketportal.jpeg",
   },
   {
     id: "lims",
@@ -66,7 +66,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/krisssix/lims-project",
     tags: ["Full Stack", "UX Design", "Development", "Research"],
     gradient: "from-emerald-50 to-teal-100",
-    image: "/images/lims.png",
+    image: "./images/lims.png",
   },
 ];
 
