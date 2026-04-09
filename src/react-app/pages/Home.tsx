@@ -3,6 +3,7 @@ import Header from "@/react-app/components/Header";
 import Hero from "@/react-app/components/Hero";
 import Marquee from "@/react-app/components/Marquee";
 import Projects from "@/react-app/components/Projects";
+import Clients from "@/react-app/components/Clients";
 import About from "@/react-app/components/About";
 import Contact from "@/react-app/components/Contact";
 import Footer from "@/react-app/components/Footer";
@@ -21,6 +22,7 @@ export default function HomePage() {
         <Hero />
         <Marquee />
         <Projects />
+        <Clients />
         <About />
         <Contact />
       </main>
