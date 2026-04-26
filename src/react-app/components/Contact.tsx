@@ -79,7 +79,7 @@ export default function Contact() {
 
         {/* Decorative */}
         <div className="mt-16 flex justify-center" aria-hidden="true">
-          <div className="font-elegant text-7xl italic text-foreground/[0.06] select-none">KN</div>
+          <img src="/FAVICON.png" alt="" className="w-20 h-20 object-contain opacity-[0.12] select-none" />
         </div>
       </div>
     </section>
