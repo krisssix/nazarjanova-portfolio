@@ -7,37 +7,49 @@ const corporate: Client[] = [
   { name: "RTVS / STVR", logo: "./images/logos/rtvs.png" },
   { name: "Ticketportal", logo: "./images/logos/ticketportal.png" },
   { name: "Mendel University", logo: "./images/logos/mendel.png" },
-  { name: "Správa železnic", logo: "./images/logos/sprava-zeleznic.png" },
-  { name: "Praha 4", logo: "./images/logos/praha4.png" },
-  {
-    name: "Národní geoportál územního plánování",
-    logo: "./images/logos/ngup.png",
-  },
   { name: "Karlova univerzita", logo: "./images/logos/karlova-univerzita.png" },
-  { name: "WattTech", logo: "./images/logos/watttech.png" },
+  { name: "Správa železnic", logo: "./images/logos/sprava-zeleznic.jpg" },
+  { name: "Praha 4", logo: "./images/logos/praha4.png" },
+  { name: "NSZ", logo: "./images/logos/nsz.png" },
+  //{ name: "Národní geoportál územního plánování", logo: "./images/logos/lion-white.svg" },
+  { name: "Sukl", logo: "./images/logos/sukl.png" },
+
 ];
 
 const freelance: Client[] = [
-  { name: "ResinStudio", logo: "./images/logos/resinstudio.png" },
-  { name: "Terkeit Lashes", logo: "./images/logos/terkeit.png" },
-  { name: "NataliCat", logo: "./images/logos/natalicat.png" },
-  { name: "PudlShop", logo: "./images/logos/pudlshop.png" },
+  { name: "Actosens", logo: "./images/logos/actosens.png" },
+
+  { name: "Rooster Riders", logo: "./images/logos/rr.svg" },
   { name: "Na vlnách Valorantu", logo: "./images/logos/valorant.png" },
-  { name: "Rooster Riders", logo: "./images/logos/rooster-riders.png" },
+  { name: "PudlShop", logo: "./images/logos/pudlshop.png" },
+  { name: "ResinStudio", logo: "./images/logos/resinstudio.webp" },
+  { name: "WattTech", logo: "./images/logos/watttech.png" },
+  { name: "Gym Permonik", logo: "./images/logos/logo.svg" },
+  //{ name: "Delmonico1894", logo: "./images/logos/logo_delmonico1894.png" },
+  { name: "NataliCat", logo: "./images/logos/natalihair.png" },
+
+  //  { name: "Terkeit Lashes", logo: "./images/logos/terkeit.png" },
+
 ];
 
+// Logos that are white / light-coloured and need a dark card background
+const darkBgLogos = new Set(["./images/logos/lion-white.svg", "./images/logos/watttech.png", "./images/logos/logo_delmonico1894.png", "./images/logos/natalihair.png", "./images/logos/logo.svg", "./images/logos/rr.png"]);
+
 function ClientCard({ client }: { client: Client }) {
+  const needsDark = darkBgLogos.has(client.logo);
+
   return (
     <div
-      className="group flex flex-col items-center gap-3 p-5 rounded-xl
+      className="group relative flex flex-col items-center gap-3 p-5 rounded-xl
                  hover:bg-warm-white/60 hover:shadow-md
                  transition-all duration-300"
     >
       <div
-        className="w-24 h-24 rounded-xl bg-warm-white border border-border/40
+        className={`w-24 h-24 rounded-xl border border-border/40
                     flex items-center justify-center overflow-hidden
                     group-hover:border-brown-light/30 group-hover:shadow-sm
-                    transition-all duration-300"
+                    transition-all duration-300
+                    ${needsDark ? "bg-black" : "bg-warm-white"}`}
       >
         <img
           src={client.logo}
@@ -53,11 +65,12 @@ function ClientCard({ client }: { client: Client }) {
             if (fallback) (fallback as HTMLElement).style.display = "flex";
           }}
         />
+        {/* Fallback initials — hidden by default, shown only on img error */}
         <span
           className="font-heading text-xl text-brown/40
                      group-hover:text-brown/70 transition-colors duration-300
                      items-center justify-center"
-          style={{ display: "flex" }}
+          style={{ display: "none" }}
         >
           {client.name
             .split(/[\s/]+/)
@@ -68,15 +81,22 @@ function ClientCard({ client }: { client: Client }) {
         </span>
       </div>
 
+      {/* Tooltip — visible on hover */}
       <span
-        className="text-xs font-medium text-muted-foreground text-center leading-tight
-                    group-hover:text-foreground transition-colors duration-300"
+        className="absolute -bottom-1 left-1/2 -translate-x-1/2 translate-y-full
+                   pointer-events-none whitespace-nowrap
+                   bg-foreground text-background text-[11px] font-medium
+                   px-2.5 py-1 rounded-md shadow-md
+                   opacity-0 group-hover:opacity-100
+                   scale-95 group-hover:scale-100
+                   transition-all duration-200 z-10"
       >
         {client.name}
       </span>
     </div>
   );
 }
+
 
 export default function Clients() {
   return (
