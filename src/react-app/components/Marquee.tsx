@@ -2,7 +2,7 @@ export default function Marquee() {
   const text = "CASE STUDIES  ·  DESIGN PROCESS  ·  UX RESEARCH  ·  LOGO DESIGN · BRANDING · UI DESIGN · WEB DESIGN · GRAPHIC DESIGN · ";
 
   return (
-    <div className="bg-cream border-y border-border overflow-hidden py-4">
+    <div className="bg-background border-y border-border overflow-hidden py-4">
       <div className="flex animate-marquee whitespace-nowrap">
         {[...Array(4)].map((_, i) => (
           <span
