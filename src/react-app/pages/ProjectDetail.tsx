@@ -4,6 +4,7 @@ import Header from "@/react-app/components/Header";
 import Footer from "@/react-app/components/Footer";
 import Contact from "@/react-app/components/Contact";
 import { projects } from "@/react-app/data/projects";
+import { getAssetPath } from "@/react-app/utils/paths";
 import {
   ArrowLeft,
   ExternalLink,
@@ -155,7 +156,7 @@ export default function ProjectDetail() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
-              src={project.image}
+              src={getAssetPath(project.image)}
               alt={project.title}
               className="w-full h-full object-cover opacity-50 transition-transform duration-[3s] ease-out group-hover:scale-105"
             />
@@ -638,11 +639,11 @@ export default function ProjectDetail() {
         <SectionChapter eyebrow="Final UI" title="Key Screens" variant="soft">
           <div className="grid md:grid-cols-2 gap-4">
             <div data-reveal data-delay="1" className="aspect-video rounded-2xl overflow-hidden border border-black/[0.06] shadow-sm">
-              <img src={project.image} alt="Primary screen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src={getAssetPath(project.image)} alt="Primary screen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="grid grid-rows-2 gap-4">
               <div data-reveal data-delay="2" className="rounded-2xl overflow-hidden border border-black/[0.06] shadow-sm">
-                <img src={project.image} alt="Secondary screen" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" />
+                <img src={getAssetPath(project.image)} alt="Secondary screen" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" />
               </div>
               <div data-reveal data-delay="3" className="rounded-2xl bg-[#F0EEE9] border border-black/[0.06] flex items-center justify-center p-8">
                 <p className="text-sm text-foreground/35 italic text-center font-light max-w-xs leading-relaxed">
