@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "@/react-app/components/Header";
 import Contact from "@/react-app/components/Contact";
 import Footer from "@/react-app/components/Footer";
+import { getAssetPath } from "@/react-app/utils/paths";
 
 export default function AboutPage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,7 +31,7 @@ export default function AboutPage() {
             <div data-reveal data-delay="2" className="flex justify-center lg:justify-start">
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px]">
                 <img
-                  src="/kristinaP.png"
+                  src={getAssetPath("/portrait.png")}
                   alt="Kristina Nazarjanová"
                   className="w-full h-full object-contain"
                   loading="eager"
@@ -104,7 +105,7 @@ export default function AboutPage() {
 
               <div className="pt-8">
                 <a
-                  href="/resume.pdf"
+                  href={getAssetPath("/resume.pdf")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-black text-white rounded-full text-[15px] font-normal hover:bg-black/90 transition-colors"
