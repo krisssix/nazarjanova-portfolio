@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristina Nazarjanová — UX/UI Designer CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #EDEDED;
+            --text: #1a1a1a;
+            --muted: #666666;
+            --accent: #10b981; /* Emerald 500 */
+            --border: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .cv-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        .name-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .name-title p {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .contact-info a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.3s;
+        }
+
+        .contact-info a:hover {
+            border-bottom: 1px solid var(--text);
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        section h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-weight: 300;
+            color: var(--muted);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .exp-header h4 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .exp-header .date {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .exp-role {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--text);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-list li {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+        }
+
+        .skill-list li::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin-right: 12px;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .edu-item .school {
+            color: var(--muted);
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .cv-container { box-shadow: none; padding: 0; width: 100%; max-width: 100%; }
+        }
+
+        @media (max-width: 768px) {
+            section { grid-template-columns: 1fr; }
+            header { flex-direction: column; align-items: flex-start; gap: 20px; }
+            .contact-info { text-align: left; }
+            .cv-container { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-container">
+    <header>
+        <div class="name-title">
+            <h1>Kristina Nazarjanová</h1>
+            <p>UX/UI Designer & Creative Thinker</p>
+        </div>
+        <div class="contact-info">
+            <div>Brno, Czech Republic</div>
+            <div><a href="mailto:nazarjanovak@gmail.com">nazarjanovak@gmail.com</a></div>
+            <div><a href="https://krisssix.github.io/nazarjanova-portfolio/">krisssix.github.io/nazarjanova-portfolio/</a></div>
+        </div>
+    </header>
+
+    <section>
+        <h2>Profile</h2>
+        <div class="content">
+            <p>
+                UX/UI designérka se sídlem v Brně s přesahem do frontendu a grafického designu. Specializuji se na komplexní systémy, backoffice nástroje a datově náročné aplikace, kde je klíčová čistota, hierarchie a použitelnost. Věřím, že skvělý design vzniká z hlubokého pochopení potřeb uživatelů a jejich každodenních výzev.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+        <div class="content">
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h4>Mendelova univerzita v Brně</h4>
+                    <span class="date">2023 — 2024</span>
+                </div>
+                <div class="exp-role">UX/UI Designer (Laboratory Management System)</div>
+                <p>Návrh a redesign komplexního systému pro správu laboratorních vzorků a environmentální výzkum. Zaměření na efektivitu práce s daty a přehlednost workflow.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h4>Ticketportal</h4>
+                    <span class="date">2022 — 2023</span>
+                </div>
+                <div class="exp-role">UX/UI Designer (Cashless Backoffice)</div>
+                <p>Kompletní návrh rozhraní pro správu bezhotovostních plateb. Analýza uživatelských potřeb a tvorba vysoce funkčního prostředí pro operátory.</p>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h4>Freelance Projects</h4>
+                    <span class="date">2020 — Současnost</span>
+                </div>
+                <div class="exp-role">Designer & Frontend Consultant</div>
+                <p>Spolupráce s řadou klientů (např. Actosens, Sukl, RTVS) na vizuální identitě, webech a rozhraních aplikací. Propojení designu s technickou realizací.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="content">
+            <div class="skills-grid">
+                <ul class="skill-list">
+                    <li>UX Research & Audit</li>
+                    <li>Information Architecture</li>
+                    <li>Wireframing & Prototyping</li>
+                    <li>Visual Design & UI</li>
+                </ul>
+                <ul class="skill-list">
+                    <li>Figma / Illustrator / PS</li>
+                    <li>React / Tailwind CSS</li>
+                    <li>Responsive Web Design</li>
+                    <li>Branding & Identity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="content">
+            <div class="edu-item">
+                <strong>Informační technologie (Ing.)</strong>
+                <span class="school">Mendelova univerzita v Brně, 2024</span>
+            </div>
+            <div class="edu-item">
+                <strong>Informační technologie (Bc.)</strong>
+                <span class="school">Mendelova univerzita v Brně, 2022</span>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-bottom: 0;">
+        <h2>Languages</h2>
+        <div class="content">
+            <p style="margin-bottom: 0;">Čeština (Rodilý mluvčí), Angličtina (Pokročilá), Ruština (Rodilý mluvčí)</p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

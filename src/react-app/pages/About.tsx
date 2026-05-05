@@ -105,7 +105,7 @@ export default function AboutPage() {
 
               <div className="pt-8">
                 <a
-                  href={getAssetPath("/resume.pdf")}
+                  href={getAssetPath("/resume.html")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-3 bg-black text-white rounded-full text-[15px] font-normal hover:bg-black/90 transition-colors"
