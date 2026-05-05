@@ -32,54 +32,54 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
   return (
     <article
+      data-reveal={isEven ? "left" : "right"}
+      tabIndex={0}
       className={`group relative flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} items-center gap-16 lg:gap-24 cursor-pointer`}
       onClick={() => navigate(`/projects/${project.id}`)}
     >
       {/* Project Image */}
-      <div 
-        data-reveal="mask"
-        className="w-full lg:w-[58%] aspect-[16/10] overflow-hidden rounded-2xl shadow-sm transition-all duration-700 group-hover:shadow-2xl group-hover:-translate-y-2 bg-white"
-      >
+      <div className="w-full lg:w-[58%] aspect-[16/10] overflow-hidden rounded-2xl shadow-sm transition-all duration-700 hover:shadow-lg">
         <img
           src={project.image}
           alt={`${project.title} mockup`}
-          className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-transform duration-1000 ease-out"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           loading="lazy"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
 
       {/* Content */}
-      <div 
-        data-reveal={isEven ? "right" : "left"}
-        className="w-full lg:w-[38%] flex flex-col items-start text-left"
-      >
+      <div className="w-full lg:w-[38%] flex flex-col items-start text-left">
         {/* Category Tag */}
         <div className="mb-6">
-          <span className="px-5 py-2 border border-black/20 text-[10px] tracking-[0.2em] uppercase font-bold rounded-full text-black/60 group-hover:bg-black group-hover:text-white group-hover:border-black transition-all duration-500">
+          <span className="px-5 py-1.5 border border-black/40 text-[10px] tracking-[0.2em] uppercase font-bold rounded-full text-black/80">
             {project.subtitle}
           </span>
         </div>
 
         <h3
-          className="font-display text-4xl md:text-5xl lg:text-6xl text-black mb-6 leading-[1.1] tracking-tight group-hover:translate-x-2 transition-transform duration-500"
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/projects/${project.id}`);
+          }}
+          className="font-display text-3xl md:text-4xl lg:text-5xl text-black mb-6 leading-tight tracking-tight hover:underline decoration-1 underline-offset-8 cursor-pointer"
         >
           {project.title}
         </h3>
 
-        <p className="text-xl text-black/60 mb-10 max-w-lg leading-relaxed font-light">
+        <p className="text-lg text-black/60 mb-8 max-w-lg leading-relaxed font-light">
           {project.description}
         </p>
 
         <div
-          className="inline-flex items-center gap-4 text-black text-[14px] font-bold uppercase tracking-[0.2em] group/link cursor-pointer"
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/projects/${project.id}`);
+          }}
+          className="inline-flex items-center gap-2 text-black text-[13px] font-bold uppercase tracking-[0.1em] group/link cursor-pointer"
         >
-          <span className="relative">
-            View Case Study
-            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black group-hover:w-full transition-all duration-500" />
-          </span>
-          <ArrowRight size={20} className="transition-transform duration-500 group-hover/link:translate-x-2" />
+          <span className="hover:underline underline-offset-4 decoration-2">View Case Study</span>
+          <ArrowRight size={18} className="transition-transform duration-300 group-hover/link:translate-x-1" />
         </div>
       </div>
     </article>
