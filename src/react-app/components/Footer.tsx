@@ -1,35 +1,32 @@
+import { Linkedin } from "lucide-react";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-background border-t border-border py-8">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-elegant text-lg italic text-muted-foreground">
-            Kristina Nazarjanová
-          </p>
+    <footer className="py-10 mt-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="border-t border-black mb-10" />
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-lg text-foreground/70">
+            <span>© {currentYear} Kristina Nazarjanová</span>
+            <span className="hidden md:inline text-foreground/30">|</span>
+            <div className="flex items-center gap-1">
+              <span>Get In Touch</span>
+              <a href="mailto:nazarjanovak@gmail.com" className="text-foreground border-b border-foreground/30 hover:border-foreground transition-all">
+                nazarjanovak@gmail.com
+              </a>
+            </div>
+          </div>
 
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} All rights reserved
-          </p>
-
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/kristyna-nazarjanova/"
+              href="https://www.linkedin.com/in/kristina-nazarjanova/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visit Kristina's LinkedIn profile"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+              className="text-foreground hover:opacity-70 transition-opacity"
+              aria-label="LinkedIn"
             >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/krisssix"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit Kristina's GitHub profile"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
-            >
-              GitHub
+              <Linkedin size={20} fill="currentColor" strokeWidth={0} />
             </a>
           </div>
         </div>
