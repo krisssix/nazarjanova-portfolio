@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Menu, X, Linkedin, Github } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router";
 
+import { getAssetPath } from "@/react-app/utils/paths";
+
 const navLinks = [
   { label: "About Me", path: "/about", target: "about" },
   { label: "Projects", path: "/projects", target: "projects" },
@@ -43,7 +45,7 @@ export default function Header() {
             className="inline-flex items-center hover:opacity-80 transition-opacity duration-200"
             aria-label="Kristina Nazarjanová — home"
           >
-            <img src="/logo-bw.png" alt="Kristina Nazarjanová" className="h-20 w-auto object-contain" />
+            <img src={getAssetPath("/logo-bw.png")} alt="Kristina Nazarjanová" className="h-20 w-auto object-contain" />
           </Link>
         </div>
 

@@ -6,6 +6,7 @@ import { ArrowRight, ArrowUp } from "lucide-react";
 
 import { useNavigate } from "react-router";
 import { Project, projects } from "@/react-app/data/projects";
+import { getAssetPath } from "@/react-app/utils/paths";
 
 export default function ProjectsPage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,7 +69,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Image Container */}
       <div className="relative aspect-[1.5/1] rounded-2xl overflow-hidden mb-8 bg-gray-100 shadow-sm transition-shadow duration-500 group-hover:shadow-xl">
         <img
-          src={project.image}
+          src={getAssetPath(project.image)}
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />

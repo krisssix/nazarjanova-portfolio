@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router";
 import { Project, projects } from "@/react-app/data/projects";
+import { getAssetPath } from "@/react-app/utils/paths";
 
 export default function Projects() {
   return (
@@ -40,7 +41,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       {/* Project Image */}
       <div className="w-full lg:w-[58%] aspect-[16/10] overflow-hidden rounded-2xl shadow-sm transition-all duration-700 hover:shadow-lg">
         <img
-          src={project.image}
+          src={getAssetPath(project.image)}
           alt={`${project.title} mockup`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           loading="lazy"

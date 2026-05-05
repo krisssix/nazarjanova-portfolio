@@ -1,4 +1,6 @@
 
+import { getAssetPath } from "@/react-app/utils/paths";
+
 interface Client {
   name: string;
   logo: string;
@@ -35,7 +37,7 @@ function ClientCard({ client }: { client: Client }) {
   return (
     <div className="group relative flex items-center justify-center w-full h-24 p-4 transition-all duration-500">
       <img
-        src={client.logo}
+        src={getAssetPath(client.logo)}
         alt={`${client.name} logo`}
         className="max-w-[120px] max-h-[50px] object-contain opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
         loading="lazy"
