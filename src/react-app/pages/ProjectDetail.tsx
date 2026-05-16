@@ -7,7 +7,6 @@ import { projects } from "@/react-app/data/projects";
 import { getAssetPath } from "@/react-app/utils/paths";
 import {
   ArrowLeft,
-  ExternalLink,
   Figma,
   Github,
   ArrowRight,
@@ -143,7 +142,7 @@ export default function ProjectDetail() {
     );
   }
 
-  const isRTVS = project.title?.toLowerCase().includes("rtvs");
+
 
   return (
     <div className={`bg-[#F6F6F4] min-h-screen text-foreground selection:bg-black selection:text-white ${isLoaded ? "is-loaded" : ""}`}>
