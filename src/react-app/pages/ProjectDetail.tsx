@@ -242,19 +242,22 @@ export default function ProjectDetail() {
         {/* Snapshot */}
         {project.content.snapshot && (
           <section data-reveal className="max-w-5xl mx-auto px-6 mb-24 md:mb-28">
-            <div className="grid grid-cols-1 md:grid-cols-6 border-y border-black/[0.055]">
+            <div className="grid grid-cols-1 md:grid-cols-6 border-y border-black/[0.055] -mr-px -mb-px overflow-hidden">
               {project.content.snapshot.map((item, idx) => {
-                const isWide = item.key === "UX Focus" || item.key === "Outcome";
+                // Ensure layout alignment by using consistent spans (total 6 per row)
+                const isOutcome = item.key === "Outcome";
+                const isUXFocus = item.key === "UX Focus";
+                const spanClass = isOutcome ? "md:col-span-6" : isUXFocus ? "md:col-span-4" : "md:col-span-2";
+                
                 return (
                   <div
                     key={idx}
                     data-reveal
                     data-delay={idx + 1}
-                    className={`py-8 md:py-10 px-0 md:px-8 border-b md:border-b-0 border-black/[0.055] ${isWide ? "md:col-span-3" : "md:col-span-2"
-                      } ${idx !== project.content.snapshot.length - 1 ? "md:border-r" : ""}`}
+                    className={`py-8 md:py-10 px-0 md:px-8 border-b border-r border-black/[0.055] ${spanClass}`}
                   >
                     <Eyebrow>{item.key}</Eyebrow>
-                    <p className={`${isWide ? "text-lg md:text-xl font-light" : "text-[15px] font-medium"} text-foreground/72 leading-relaxed`}>
+                    <p className={`${(isUXFocus || isOutcome) ? "text-lg md:text-xl font-light" : "text-[15px] font-medium"} text-foreground/72 leading-relaxed`}>
                       {item.value}
                     </p>
                   </div>
