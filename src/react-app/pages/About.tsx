@@ -50,10 +50,10 @@ export default function AboutPage() {
             <h3 className="text-[17px] font-normal tracking-wide text-foreground uppercase pt-1">Bio</h3>
             <div className="text-muted-foreground font-light text-[15px] leading-relaxed space-y-6 max-w-4xl">
               <p>
-                Hi, I'm Kristina — a UX/UI designer based in Brno, Czech Republic, with a background in both design and frontend development. I believe that great design emerges from understanding people: their needs, frustrations, and aspirations.
+                Hi, I'm Kristina. A UX/UI designer based in Brno, Czech Republic, with a background in both design and frontend development. I believe that great design emerges from understanding people: their needs, frustrations, and aspirations.
               </p>
               <p>
-                I specialize in complex workflow systems: backoffice tools, data-heavy dashboards, and enterprise applications where clarity isn't optional. My work spans from full UX research through to implementation-ready Figma handoff — and sometimes the implementation itself.
+                I specialize in complex workflow systems: backoffice tools, data-heavy dashboards, and enterprise applications where clarity isn't optional. My work spans from full UX research through to implementation-ready Figma handoff and sometimes the implementation itself.
               </p>
               <p>
                 Most recently I led the design of a laboratory management system for environmental research at Mendel University, and a cashless payment backoffice for Ticketportal. I care about the gap between how software looks and how it actually works. That's where I spend most of my time.
