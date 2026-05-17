@@ -31,7 +31,7 @@ export default function AboutPage() {
             <div data-reveal data-delay="2" className="flex justify-center lg:justify-start">
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px]">
                 <img
-                  src={getAssetPath("/portrait.png")}
+                  src={getAssetPath("/portrait (6).png")}
                   alt="Kristina Nazarjanová"
                   className="w-full h-full object-contain"
                   loading="eager"
